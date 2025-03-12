@@ -1,10 +1,15 @@
 
 p{
     color: rgb(0, 0, 0);
+    padding: 0 45px;
+    text-indent: 15px;
 }
 
 body{
-    background-image: url(../img/body-background.png);
+    margin-left: auto;
+    margin-right: auto;
+    width: 940px;
+    background-image: url(/simple-html/img/body-background.png);
     background-size: cover;
     background-position: center; 
     background-attachment: fixed;
@@ -12,22 +17,32 @@ body{
 }
 
 figcaption{
-    font-style: oblique;
-    background-color: antiquewhite;
-    width:max-content;
-    text-align: center
+    font-style: italic;
+    margin-top: 10px;
 }
 
-h1, h2{
-    background-image: url(../img/sobre-background.jpg);
-    width:max-content
+h1{
+    background-image: url(/simple-html/img/sobre-background.jpg);
+    padding: 10px;
+    width:auto
+}
+
+h2{
+    border-bottom: 2px groove #333333;
+    margin-top: 30px;
 }
 
 figure{
-    text-align: center
+    text-align: center;
+    background-color: #f2eded;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 30px
+
 }
 
 img{
-    box-shadow: inset;
+    box-shadow: #000;
+    border-radius: 5%;
 }
 
