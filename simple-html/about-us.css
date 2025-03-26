@@ -25,6 +25,7 @@ figcaption{
     font-style: italic;
     margin-top: 10px;
     font-family: var(--figcaption-font);
+    color: #000;
 }
 
 h1, h2{
@@ -41,7 +42,9 @@ figure{
     background-color: var(--color-base-figure-background);
     border: 1px solid var(--color-base-figure-border);
     padding: 15px;
-    margin: 30px
+    margin: 30px;
+    background-color: #a5a5a5;
+    border-radius: 30px;
 
 }
 
@@ -72,3 +75,24 @@ img{
     float: right;
     margin: 0 0 10px 10px;
 }
+
+nav a{
+    text-decoration: none;
+    padding: 15px;
+    color: #000;
+    border-radius: 10%;
+    height: 15px;
+    float: right;
+    font-size:large
+}
+
+nav{
+    height: 50px;
+    background-color: #ccc;
+}
+
+article{
+    background-color: #ccc;
+    margin: 10px 0px;
+}
+

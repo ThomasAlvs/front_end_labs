@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="/simple-html/about-us.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +13,18 @@
 </head>
 
 <body>
-    <img src="/simple-html/img/logo.png" alt="">
-    <h1><strong>A Mirror Fashion</strong></h1>
+    <header>
+        <img src="/simple-html/img/logo.png" alt="">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#sobre" id="sobre-sobre">Sobre</a></li>
+            <li><a href="#historia" id="historia-historia">Historia</a></li>
+            <li><a href="#diferenciais" id="diferenciais-diferenciais">Diferenciais</a></li>
+        </ul>
+    </nav>
+    <article>
+    <h1 id="sobre"><strong>A Mirror Fashion</strong></h1>
     <p>A Mirror Fashion é a maior empresa comércio eletrônico no segmento de moda em todo o mundo.
         Fundada em 1932, possui filiais em 124 países, sendo líder de mercado com mais de 90% de
         participação em 118 deles.
@@ -21,7 +32,7 @@
         Nosso centro de distribuição fica em <a target="_blank" title="Ir para o Google Maps" href="https://www.google.com.br/maps?q=Jacarezinho">Jacarezinho</a>, no Paraná. De lá, saem 48 aviões que
         distribuem nossos produtos às casas do mundo todo. Nosso centro de distribuição:
     </p>
-    <figure id="centro-distribuicao">
+    <figure id="centro-distribuicao" >
         <img  src="/simple-html/img/centro-distribuicao.png" alt="Imagem do centro de distribuição da Mirror Fashion">
         <figcaption>Centro de distribuição da Mirror Fashion</figcaption>
     </figure>
@@ -57,6 +68,7 @@
             Fashion, além de presidentes da União Européia, Ásia e o secretário-geral da ONU.
         </p>
     </div>
+</article>
    <h2 id="diferenciais">Diferenciais</h2> 
    <ul>
     <li>Menor preço do varejo, garantido</li>
