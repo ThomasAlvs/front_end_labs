@@ -1,7 +1,7 @@
 :root{
     --color-base:#333;
-    --color-base-figure-background: ghostwhite;
-    --color-base-figure-border: #ccc;
+    --color-base-figure-background: rgb(255, 0, 0);
+    --color-base-figure-border: #000000;
     --body-font: font-family: "Merriweather", serif;
     --figcaption-font:font-family: "Zilla Slab", serif;
 }
@@ -43,7 +43,7 @@ figure{
     border: 1px solid var(--color-base-figure-border);
     padding: 15px;
     margin: 30px;
-    background-color: #a5a5a5;
+    background-color: #ffb968;
     border-radius: 30px;
 
 }
@@ -88,11 +88,13 @@ nav a{
 
 nav{
     height: 50px;
-    background-color: #ccc;
+    background-color: #6ca7ff;
 }
 
+
+
 article{
-    background-color: #ccc;
+    background-color: #fff59c;
     margin: 10px 0px;
 }
 
