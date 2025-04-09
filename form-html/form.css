@@ -1,29 +1,78 @@
 :root{
-
+    --color-background: rgb(0, 41, 82);
+    --second-color: rgb(0, 65, 131);
+    --titulo: #ffff;
 }
-
+ 
 .body{
-    background-color: rgb(0, 65, 131);
+    background-color: var(--second-color);
+    border: 1px solid;
 }
-
+ 
 body{
     margin-left: auto;
     margin-right: auto;
     width: 940px;
     color: var(--color-base);
     font-family: var(--body-font);
-    border: 1px solid;
+    
+    background-color: var(--color-background);
 }
-
+ 
+form{
+    padding: 10px;
+    margin: 10px;
+}
+ 
 fieldset {
     display: grid;
     grid-template-columns: auto;
     background-color: dodgerblue;
     padding: 10px;
-
+ 
   }
-
-form{
-    padding: 10px;
-    margin: 10px;
+ 
+legend{
+    color: var(--titulo);
 }
+ 
+header h1, header h2{
+    color: var(--titulo);
+    margin-left: 2%;
+}
+ 
+.campos-inputs{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+ 
+#login{
+    padding-bottom: 2%;
+}
+ 
+
+ 
+.top-left {
+    display: grid;
+    grid-template-columns: 1 2;
+}
+ 
+.top-right {
+    margin-left: 10px;
+}
+ 
+.grid-button-container{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+ 
+.grid-header-container {
+    display: grid;
+    grid-template-areas: 'top-left top-right';
+    border-bottom: black 2px solid;
+    margin-bottom: 5px;
+}
+ 
+ 
+ 
+ 
