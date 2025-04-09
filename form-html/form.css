@@ -1,6 +1,9 @@
 :root{
     --color-background: rgb(0, 41, 82);
+<<<<<<< HEAD
     --second-color: rgb(0, 65, 131);
+=======
+>>>>>>> dbc485a2eaccc32826c07f5de0cefd083f4f252a
     --titulo: #ffff;
 }
  
@@ -15,8 +18,18 @@ body{
     width: 940px;
     color: var(--color-base);
     font-family: var(--body-font);
+<<<<<<< HEAD
     
     background-color: var(--color-background);
+=======
+    border: 1px solid;
+    background-color: var(--color-background);
+}
+
+form{
+    padding: 10px;
+    margin: 10px;
+>>>>>>> dbc485a2eaccc32826c07f5de0cefd083f4f252a
 }
  
 form{
@@ -51,6 +64,7 @@ header h1, header h2{
 }
  
 
+<<<<<<< HEAD
  
 .top-left {
     display: grid;
@@ -76,3 +90,42 @@ header h1, header h2{
  
  
  
+=======
+legend{
+    color: var(--titulo);
+}
+
+header h1, header h2{
+    color: var(--titulo);
+    margin-left: 2%;
+}
+
+.campos-inputs{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+#login{
+    padding-bottom: 2%;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    align-items: center; 
+}
+
+.header-text {
+    display: flex; 
+    align-items: center;
+}
+
+#registration-icon {
+    margin-left: 10px; 
+}
+
+
+
+
+
+>>>>>>> dbc485a2eaccc32826c07f5de0cefd083f4f252a
