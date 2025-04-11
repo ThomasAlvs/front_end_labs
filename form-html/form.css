@@ -15,7 +15,6 @@ body{
     width: 940px;
     color: var(--color-base);
     font-family: var(--body-font);
-    
     background-color: var(--color-background);
 }
  

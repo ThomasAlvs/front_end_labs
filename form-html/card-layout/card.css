@@ -1,0 +1,20 @@
+.cards-grid-line{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+li{
+    display: flex;
+}
+
+button{
+    align-items: center;
+}
+
+article{
+    margin: auto;
+    margin-top: 10%;
+    background-color: rgb(79, 150, 255);
+    width: 300px;
+    height: auto;
+}
