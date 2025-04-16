@@ -1,0 +1,204 @@
+:root {
+    /* Cores corporativas (exemplo: azul mais sóbrio, cinzas) */
+    --color-primary: #0052cc; /* Azul corporativo */
+    --color-primary-dark: #0041a3; /* Para hover do botão */
+    --background-color: #f4f7f9; /* Cinza claro para o fundo */
+    --color-text: #343a40; /* Cinza escuro para texto */
+    --color-text-light: #6c757d; /* Cinza mais claro para detalhes */
+    --color-alert: #ffc107; /* Amarelo/Laranja para destaque */
+    --color-light: #ffffff; /* Branco */
+    --color-border: #dee2e6; /* Cor suave para bordas */
+
+    --font-main: "Poppins", sans-serif;
+
+    /* Ajustes de dimensões e espaçamento */
+    --card-padding: 30px; /* Padding interno */
+    --card-width: 320px; /* Largura do card */
+    --card-border-radius: 8px; /* Bordas mais suaves */
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra sutil */
+    --card-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.12); /* Sombra no hover */
+}
+
+/* Reset básico (se não estiver usando um arquivo reset.css) */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    font-size: 16px; /* Base de fonte */
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente se o conteúdo for menor que a tela */
+    justify-content: center;
+    gap: 30px; /* Espaço entre os cards */
+    padding: 40px 20px; /* Espaçamento nas laterais e topo/base */
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha */
+    font-family: var(--font-main);
+    background-color: var(--background-color);
+    color: var(--color-text);
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+.card {
+    display: flex; /* Usar Flexbox para layout interno */
+    flex-direction: column; /* Organizar itens em coluna */
+    width: 100%; /* Ocupa largura total no container flex do body */
+    max-width: var(--card-width); /* Limita a largura máxima */
+    min-height: 480px; /* Altura mínima para consistência, mas permite crescer */
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    background-color: var(--color-light);
+    box-shadow: var(--card-shadow);
+    text-align: left; /* Alinhar texto à esquerda */
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative; /* Necessário para o badge */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito sutil de levantar */
+    box-shadow: var(--card-shadow-hover);
+}
+
+/* --- Estrutura interna do Card --- */
+.card-header {
+    margin-bottom: 20px; /* Espaço abaixo do cabeçalho */
+    text-align: center; /* Centralizar título e preço */
+}
+
+.card-features {
+    flex-grow: 1; /* Faz esta seção ocupar o espaço disponível */
+    margin-bottom: 25px; /* Espaço antes do botão */
+}
+
+.card-footer {
+    margin-top: auto; /* Empurra o footer (botão) para baixo */
+    text-align: center; /* Centraliza o botão no rodapé */
+}
+
+/* --- Elementos do Card --- */
+.card h2 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 600; /* Um pouco mais de peso */
+    margin-bottom: 10px;
+    color: var(--color-text);
+    /* text-shadow: none; Remove a sombra do texto */
+}
+
+.card var {
+    color: var(--color-primary);
+    font-weight: 600; /* Peso para o preço */
+    font-size: 2.5rem; /* 40px */
+    font-style: normal;
+    display: block; /* Garante que o preço fique em sua linha */
+    margin-bottom: 5px;
+    /* transition: none; Remove a transição de fonte no hover */
+}
+
+.card var small {
+    font-size: 1rem; /* 16px */
+    font-weight: 400;
+    color: var(--color-text-light);
+    margin-left: 5px; /* Pequeno espaço */
+}
+
+abbr[title] {
+    cursor: help;
+    text-decoration: none; /* Remove sublinhado padrão */
+    border-bottom: 1px dotted var(--color-text-light); /* Sublinhado pontilhado sutil */
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espaço entre ícone e texto */
+    padding: 8px 0; /* Espaçamento vertical entre itens */
+    font-size: 0.95rem; /* Levemente menor */
+    color: var(--color-text);
+}
+
+ul li .material-symbols-outlined {
+    color: var(--color-primary); /* Ícone com a cor primária */
+    font-size: 1.4rem; /* Tamanho do ícone */
+    flex-shrink: 0; /* Evita que o ícone seja espremido */
+}
+
+/* --- Botão --- */
+.card button {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    padding: 12px 25px; /* Mais padding */
+    font-size: 1rem; /* 16px */
+    font-weight: 500; /* Peso médio */
+    font-family: var(--font-main);
+    border-radius: var(--card-border-radius); /* Mesma borda do card */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block; /* Para padding funcionar corretamente */
+    width: 80%; /* Botão com boa largura, mas não 100% */
+    max-width: 200px; /* Limite máximo */
+}
+
+.card button:hover {
+    background-color: var(--color-primary-dark);
+    transform: scale(1.03); /* Efeito sutil de clique */
+}
+
+/* --- Destaque do plano Elite --- */
+.card.elite {
+    border: 2px solid var(--color-primary); /* Borda na cor primária */
+    /* Ou usar uma borda superior: */
+    /* border-top: 4px solid var(--color-primary); */
+    /* border-left: none; border-right: none; border-bottom: none; */
+
+     /* Opcional: Fazer o botão Elite ter estilo diferente */
+    /* background-color: var(--color-alert); */
+    /* color: var(--color-text); */
+}
+
+.card.elite button {
+     /* Se quiser um botão diferente para o plano popular */
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+/* Badge "Mais Popular" */
+.popular-badge {
+    position: absolute;
+    top: -1px; /* Ajuste fino para alinhar com a borda */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 4px 15px;
+    font-size: 0.75rem; /* 12px */
+    font-weight: 600;
+    border-radius: 0 0 var(--card-border-radius) var(--card-border-radius); /* Cantos inferiores arredondados */
+    z-index: 1; /* Para ficar sobre a borda, se houver */
+}
+
+
+/* Media Query para telas menores (exemplo) */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Empilha os cards verticalmente */
+        align-items: center; /* Centraliza os cards empilhados */
+        padding: 20px; /* Menos padding */
+    }
+
+    .card {
+        max-width: 90%; /* Cards ocupam mais largura da tela */
+        min-height: auto; /* Altura automática */
+    }
+}
