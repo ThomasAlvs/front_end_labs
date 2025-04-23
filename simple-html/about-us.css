@@ -1,100 +1,151 @@
-:root{
-    --color-base:#333;
-    --color-base-figure-background: rgb(255, 0, 0);
-    --color-base-figure-border: #000000;
-    --body-font: font-family: "Merriweather", serif;
-    --figcaption-font:font-family: "Zilla Slab", serif;
+:root {
+    --color-base: #2c3e50; /* Azul escuro */
+    --color-base-figure-background: #3498db; /* Azul claro */
+    --color-base-figure-border: #2980b9; /* Azul mais escuro */
+    --body-font: "Merriweather", serif;
+    --figcaption-font: "Zilla Slab", serif;
 }
 
-
-body{
+body {
     margin-left: auto;
     margin-right: auto;
     width: 940px;
     color: var(--color-base);
-    font-family: var(--body-font)
+    font-family: var(--body-font);
+    background-color: #ecf0f1; /* Fundo cinza claro */
 }
 
-p{
-    color: rgb(0, 0, 0);
+p {
+    color: #34495e; /* Azul escuro para o texto */
     padding: 0 45px;
     text-indent: 15px;
 }
 
-figcaption{
+figcaption {
     font-style: italic;
     margin-top: 10px;
     font-family: var(--figcaption-font);
-    color: #000;
+    color: #7f8c8d; /* Cinza para figcaption */
 }
 
-h1, h2{
+h1, h2 {
     padding: 10px;
-    width:auto
+    width: auto;
+    color: #e74c3c; /* Vermelho suave para títulos */
 }
 
-h2{
+h2 {
     margin-top: 30px;
 }
 
-figure{
+figure {
     text-align: center;
-    background-color: var(--color-base-figure-background);
-    border: 1px solid var(--color-base-figure-border);
+    background-color: #ffffff; /* Fundo branco para figuras */
+    border: 2px solid var(--color-base-figure-border);
     padding: 15px;
     margin: 30px;
-    background-color: #ffb968;
     border-radius: 30px;
-
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-img{
-    box-shadow: #000;
+img {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Sombra sutil */
     border-radius: 5%;
 }
 
-#centro-distribuicao{
+#centro-distribuicao {
     margin-left: auto;
     margin-right: auto;
     width: 550px;
 }
 
-#rodape{
-    color: #777;
+#rodape {
+    color: #34495e; /* Azul escuro para contraste */
     margin: 30px 0;
     padding: 30px 0;
 }
 
-#rodape img{
+#rodape img {
     margin-right: 30px;
     vertical-align: middle;
     width: 94px;
 }
 
-#familia-pelho{
+#familia-pelho {
     float: right;
-    margin: 0 0 10px 10px;
+    margin: 0 0 3px 3px;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     padding: 15px;
-    color: #000;
+    color: #ffffff; /* Texto branco para links */
+    background-color: #2980b9; /* Azul forte para o fundo do nav */
     border-radius: 10%;
-    height: 15px;
+    height: 45px;
     float: right;
-    font-size:large
+    font-size: large;
 }
 
-nav{
+nav {
     height: 50px;
-    background-color: #6ca7ff;
+    background-color: #3498db; /* Azul claro para o nav */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra mais suave e sutil no nav */
 }
 
-
-
-article{
-    background-color: #fff59c;
+article {
+    background-color: #ffffff; /* Fundo branco para artigos */
     margin: 10px 0px;
+    border: 1px solid #bdc3c7; /* Borda sutil */
 }
 
+ul {
+    padding: 0 45px;
+}
+
+.p-historia p{
+    padding: 5px;
+}
+
+.p-historia{
+    height: 430px;
+}
+
+@media (max-width: 768px) {
+    body {
+        width: auto;
+        margin: 0 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        padding: 8px;
+    }
+
+    h2 {
+        font-size: 1.4em;
+        margin-top: 20px;
+    }
+
+    p {
+        padding: 0 15px;
+        text-indent: 15px;
+        text-align: left;
+        line-height: 1.5;
+    }
+
+    figure {
+        margin: 20px 0;
+        padding: 10px;
+    }
+
+    #centro-distribuicao {
+        width: 100%;
+        max-width: 550px;
+    }
+
+    #familia-pelho {
+        float: none;
+        margin: 20px auto;
+        display: block;
+    }
